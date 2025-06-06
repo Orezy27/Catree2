@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catree Navbar</title>
+  <link rel="stylesheet" href="../css/monitoring.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/edit_data.css">
+
+</head>
+<body>
+  <header class="navbar" id="navbar"></header>
+
+  <h1><u>Welcome, Fabian</u></h1>
+  <div class="container">
+    <div class="left-panel">
+    <h2>Calorie Consumption</h2>
+      <p>This pie chart displays the distribution of calories consumed by the user based on the main macronutrients: protein, carbohydrates, and fat.</p>
+
+      <div class="chart">
+        <div class="chart-content">
+          <div class="legend">
+            <div><span class="dot protein"></span> Protein</div>
+            <div><span class="dot carbs"></span> Carbs</div>
+            <div><span class="dot fat"></span> Fat</div>
+          </div>
+          <div class="donut">
+            <div class="percent-label label-protein">50%</div>
+            <div class="percent-label label-carbs">30%</div>
+            <div class="percent-label label-fat">20%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="user_data">
+        <div class="automatic">
+            <input type="checkbox" name="automatic_check" id="">
+
+            <div class="sentence-automatic">
+              <p class="automatic-word">AUTOMATIC</p> 
+              <p>from History market user</p>
+            </div>
+        </div>
+
+        <div class="input_data">
+          <button onclick="toggleInputForm()" class="open-btn">Input & Edit Data</button>
+
+<!-- Pop-out panel -->
+          <div class="input-panel" id="inputPanel">
+            <div class="input-header">
+              <button onclick="toggleInputForm()" class="close-btn">X</button>
+              <h2><em>Input & edit data</em></h2>
+            </div>
+            <hr>
+
+            <form>
+              <label>Usia</label>
+              <input type="number" placeholder="Masukkan usia...">
+
+              <label>Tinggi Badan</label>
+              <input type="number" placeholder="Masukkan tinggi badan...">
+
+              <label>Berat Badan</label>
+              <input type="number" placeholder="Masukkan berat badan...">
+
+              <label>Lingkar Pinggang</label>
+              <input type="number" placeholder="Masukkan lingkar pinggang...">
+
+              <label>Kondisi</label><br>
+              <div class="checkbox-group">
+                <label><input type="checkbox"> Hamil</label>
+                <label><input type="checkbox"> Diabetes</label>
+                <label><input type="checkbox"> Obesitas</label>
+                <label><input type="checkbox"> Kanker</label>
+                <label><input type="checkbox"> Dan lain-lain</label>
+              </div>
+
+              <label>Aktivitas Seharian</label>
+              <input type="text" placeholder="Contoh: Ringan, Sedang, Berat">
+
+              <button type="submit" class="save-btn">SAVE</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="right-panel">
+      <div class="user-card">
+        <div class="header">
+          <div class="gender-icons">
+            <img src="../asset/image 52.png" alt="">
+            <input type="checkbox" name="" id="">
+            <img src="../asset/image 53.png" alt="">
+            <input type="checkbox" name="" id="">
+          </div>
+        </div>
+        
+          
+          <div class="message">
+            <div class="user-info">
+              <img src="https://cdn-icons-png.flaticon.com/512/706/706830.png" alt="Avatar" class="avatar">
+              <h3>Fabian,<br>you're doing great!</h3>
+            </div>
+            <hr>
+            <p>Based on your recent meals, your protein intake is well-balanced. Try adding more fiber-rich options tomorrow for even better results.</p>
+            <a href="#">See More Description →</a>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <section class="product-section">
+  <h2 class="page-title">Recomendation</h2>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="../asset/productimg.jpg" alt="Food Image">
+        <div class="product-info">
+          <h3>Grilled Chicken Quinoa Bowl</h3>
+          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
+          <div class="product-footer">
+            <span class="price">Rp25.000</span>
+            <button class="buy-button">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../asset/productimg.jpg" alt="Food Image">
+        <div class="product-info">
+          <h3>Grilled Chicken Quinoa Bowl</h3>
+          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
+          <div class="product-footer">
+            <span class="price">Rp25.000</span>
+            <button class="buy-button">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../asset/productimg.jpg" alt="Food Image">
+        <div class="product-info">
+          <h3>Grilled Chicken Quinoa Bowl</h3>
+          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
+          <div class="product-footer">
+            <span class="price">Rp25.000</span>
+            <button class="buy-button">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../asset/productimg.jpg" alt="Food Image">
+        <div class="product-info">
+          <h3>Grilled Chicken Quinoa Bowl</h3>
+          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
+          <div class="product-footer">
+            <span class="price">Rp25.000</span>
+            <button class="buy-button">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <h2 class="page-title">History</h2>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="../asset/productimg.jpg" alt="Food Image">
+        <div class="product-info">
+          <h3>Grilled Chicken Quinoa Bowl</h3>
+          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
+          <div class="product-footer">
+            <span class="price">Rp25.000</span>
+            <button class="buy-button">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../asset/productimg.jpg" alt="Food Image">
+        <div class="product-info">
+          <h3>Grilled Chicken Quinoa Bowl</h3>
+          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
+          <div class="product-footer">
+            <span class="price">Rp25.000</span>
+            <button class="buy-button">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../asset/productimg.jpg" alt="Food Image">
+        <div class="product-info">
+          <h3>Grilled Chicken Quinoa Bowl</h3>
+          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
+          <div class="product-footer">
+            <span class="price">Rp25.000</span>
+            <button class="buy-button">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../asset/productimg.jpg" alt="Food Image">
+        <div class="product-info">
+          <h3>Grilled Chicken Quinoa Bowl</h3>
+          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
+          <div class="product-footer">
+            <span class="price">Rp25.000</span>
+            <button class="buy-button">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="../js/footer.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/edit_data.js"></script>
+</body>
+</html>

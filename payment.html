@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Catree</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+    <body>
+        <div class="container">
+            <div class="button-back">
+                <a href="../html/ingredients.html">&lt; Back</a>
+            </div>
+            <header>
+                <h1>SELECT PAYMENT METHODS</h1>
+                <p>Pilih Metode Pembayaran</p>
+            </header>
+
+            <div class="payment-section">
+                <div class="payment-methods">
+                    <button class="method selected">
+                    Credit Card <img src="../../asset/Group 143.png" alt="visa mastercard"/>
+                    </button>
+                    <button class="method">
+                    E-Wallet <img src="../../asset/Group 144.png" alt="gopay ovo dana"/>
+                    </button>
+                    <button class="method">QRIS</button>
+                </div>
+
+                <div class="payment-form">
+                    <label>Cardholder’s Name</label>
+                    <input type="text" />
+
+                    <label>Card Number</label>
+                    <input type="text" />
+
+                    <div class="inline-fields">
+                        <div>
+                            <label>Expiration Date</label>
+                            <div class="inline-fields">
+                                <input type="text" placeholder="MM" maxlength="2"/>
+                                <input type="text" placeholder="YYYY" maxlength="4"/>
+                            </div>
+                        </div>
+                        <div>
+                            <label>CVV Code</label>
+                            <input type="text" maxlength="3"/>
+                        </div>
+                    </div>
+
+                    <h3>Billing Address</h3>
+                    <input type="text" placeholder="Country"/>
+                    <input type="text" placeholder="City"/>
+                    <input type="text" placeholder="Adress"/>
+                    <input type="text" placeholder="Province"/>
+                    <input type="text" placeholder="Postal Code"/>
+                </div>
+
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <img src="../../asset/image 62.png" alt="Grilled Chicken Bowl"/>
+                    <p class="item-name">Grilled Chicken Quinoa Bowl</p>
+                    <p class="price">Rp52.000</p>
+
+                    <div class="summary-details">
+                        <p><strong>Delivery Time:</strong> Sabtu - Kamis 35 Februari</p>
+                        <p><strong>Delivery Fee:</strong> RP.500.000.000</p>
+                        <p><strong>Discount:</strong> RP.1000</p>
+                        <p><strong>Invoice:</strong> blablabla</p>
+                        <p><strong>Sub Total:</strong> RP.5.00000.0000.00000</p>
+                        <p><strong>Total:</strong> RP.5.00000.0000.00000</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="buy-button">BUY</button>
+        </div>
+    </body>
+</html>
