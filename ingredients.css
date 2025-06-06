@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Inria Serif', serif;
-  background: url('backgroundd.png');
+  background-image: url('backgroundd.png');
   background-size: cover;
 }
 
