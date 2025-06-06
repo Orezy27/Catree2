@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Inria Serif', serif;
-  background-image: url(background.png); /* ganti dengan file sesuai nama kamu */
+  background-image: url("background.png"); /* ganti dengan file sesuai nama kamu */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
