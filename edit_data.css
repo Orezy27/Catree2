@@ -1,0 +1,93 @@
+.open-btn {
+  /* margin: 30px; */
+  /* padding: 10px 20px; */
+  background-color: #d89b27;
+  color: white;
+
+  /* width: 200px; */
+  border: none;
+  /* font-weight: bold; */
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.input-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 90%;
+  max-width: 400px;
+  height: 100%;
+  background-color: #2f2d52b9;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.8);
+  padding: 20px;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.input-panel.active {
+  right: 0;
+}
+
+.input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* width: 300px; */
+  font-family: 'Inria Serif', serif;
+  margin-left: 20px;
+}
+
+.close-btn {
+  background-color: #a00;
+  color: white;
+  border: none;
+  font-size: 18px;
+  /* padding: 5px 10px; */
+  cursor: pointer;
+
+  width: 20px;
+  margin-right: 100px;
+  height: 20px;
+}
+
+form {
+  margin-top: 10px;
+}
+
+label {
+  /* font-weight: bold; */
+  font-family: 'Inria Serif', serif;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+
+  color: white;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+.checkbox-group label {
+  display: inline-block;
+  margin: 5px 10px 0 0;
+}
+
+.save-btn {
+  margin-top: 20px;
+  width: 100%;
+  /* padding: 10px; */
+  /* background-color: cyan; */
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}

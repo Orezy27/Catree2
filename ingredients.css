@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: 'Inria Serif', serif;
+  background: url('../asset/backgroundd.png');
+  background-size: cover;
+}
+
+.button-back{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.button-back a{
+  color: #2d2d2d;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.button-back a:hover{
+  color: #00aeff;
+}
+
+
+.wrapper {
+  padding: 40px;
+  /* display: flex; */
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: row; /* pastikan ini */
+  overflow: hidden;
+  max-width: 2100px;
+}
+
+.left-column {
+  flex: 1;
+  max-width: 50%;
+}
+
+.left-column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.right-column {
+  flex: 1;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-column h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0px;
+  color: #2d2d2d;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.content-columns {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.ingredients, .toppings {
+  flex: 1;
+  min-width: 250px;
+  font-size: 0.95rem;
+}
+
+ul {
+  margin: 5px 0 15px 20px;
+  padding: 0;
+  list-style-type: disc;
+  color: #333;
+}
+
+.footer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2d2d2d;
+  margin-right: 10px;
+}
+
+.buy-btn {
+  background-color: #e8a939;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.buy-btn a{
+  color: white;
+  text-decoration: none;
+}
+
+.buy-btn:hover {
+  background-color: #d28c1f;
+}

@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #fef6ee;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.payment-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+    align-items: start;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.method {
+    padding: 20px;
+    font-size: 16px;
+    border: 2px solid #d6a779;
+    background: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    height: 60px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.method.selected {
+    background: #d6a779;
+    color: #fff;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+}
+
+.payment-form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #d6a779;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.inline-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.order-summary {
+    flex: 1;
+    background: #f7dcb5;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.order-summary h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.order-summary img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.item-name {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.price {
+    text-align: center;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.summary-details p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.buy-button {
+    margin-top: 30px;
+    width: 200px;
+    padding: 15px;
+    font-size: 18px;
+    background: #e4ac36;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* box-shadow: 2px 4px 0px #c98f28; */
+    cursor: pointer;
+}
+
+.buy-button:hover{
+    background-color: #d28c1f;
+}
+
+.button-back a{
+    text-decoration: none;
+    color: #2d2d2d;
+    font-size: 20px;
+}
+
+.button-back a:hover{
+  color: #00aeff;
+}
