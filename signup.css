@@ -1,25 +1,30 @@
-body{
-    background-image: url(background.png); /* ganti dengan file sesuai nama kamu */
-    background-size: cover;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../asset/background.png);
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
+    font-family: 'Inria Serif', serif;
+    background-color: #ffffff;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+form p{
+    font-size: 0.8rem;
+    color: grey;
 }
 
 .container {
-/*     background-color: none; /* Warna latar belakang form, asumsi putih */ */
-    padding: 40px; /* Padding di dalam container form */
-    border-radius: 15px; /* Sudut membulat */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
-    max-width: 500px; /* Lebar maksimum form */
-    width: 100%; /* Agar responsif terhadap lebar layar */
-    text-align: left; /* Teks rata kiri di dalam form */
-
-    /* Ini kunci untuk scroll: */
-    height: auto;
-    max-height: 100%; /* Batasi tinggi container agar tidak melebihi viewport (dikurangi padding body) */
-    overflow-y: auto; /* Aktifkan scroll vertikal jika konten melebihi max-height */
-    -ms-overflow-style: none;  /* Hides scrollbar for IE and Edge */
-    scrollbar-width: none;  /* Hides scrollbar for Firefox */
+    margin-top: 100px;
+    margin-left: 110px;
+    width: auto;
 }
 
 h1 {
@@ -32,7 +37,7 @@ label {
     display: block;
     margin-top: 20px;
     margin-bottom: 6px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #5f3c1c;
 }
 
@@ -45,6 +50,10 @@ input[type="password"] {
     border-bottom: 2px solid #a97b4c;
     background: transparent;
     font-size: 1rem;
+}
+
+input[type="password"]{
+    margin-bottom: 20px;
 }
 
 .gender-buttons {
@@ -63,11 +72,6 @@ input[type="password"] {
     font-size: 0.9rem;
 }
 
-.form p{
-    font-size: 0.2rem;
-    color: grey;
-}
-
 .gender-buttons button:hover {
     background-color: #d98d46 ;
     transition: 0.3s;
@@ -75,7 +79,7 @@ input[type="password"] {
 
 .register-btn {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 10px;
     padding: 12px;
     background-color: #d89b27;
     color: white;
