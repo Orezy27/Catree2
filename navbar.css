@@ -2,19 +2,18 @@
 .navbar {
     position: sticky;
     top: 0;
-    /* left: 80px; */ /* Remove fixed left position, let auto margins handle centering */
     z-index: 1000;
     display: flex;
     justify-content: space-around; /* Default for larger screens */
     align-items: center;
     background-color: #eee7de56;
     border-radius: 50px;
-    margin: 1rem auto; /* Centers the navbar and adds vertical margin */
-    width: calc(100% - 40px); /* Adjust width to account for body padding if you have it, or use max-width and padding in a container */
-    max-width: 1200px; /* Limit max width on very large screens */
+    margin: 1rem auto;
+    width: calc(100% - 40px); /* Adjust width for body padding */
+    max-width: 1200px; /* Limit max width */
     height: 80px;
     box-shadow: 0 4px 6px rgba(122, 99, 99, 0.1);
-    padding: 0 20px; /* Add some padding inside the navbar */
+    padding: 0 20px;
 }
 
 /* Logo area */
@@ -24,7 +23,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    flex-shrink: 0; /* Prevent logo from shrinking */
+    flex-shrink: 0;
 }
 
 /* Icons in nav */
@@ -39,9 +38,9 @@
 .nav-links {
     display: flex; /* Default for larger screens */
     align-items: center;
-    gap: 5rem; /* Default for larger screens */
-    flex-grow: 1; /* Allow nav links to take available space */
-    justify-content: center; /* Center the links within their available space */
+    gap: 5rem;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 .nav-links a {
@@ -51,8 +50,8 @@
     font-size: 18px;
     display: flex;
     align-items: center;
-    white-space: nowrap; /* Prevent link text from wrapping */
-    padding: 5px 10px; /* Add padding for better click area */
+    white-space: nowrap;
+    padding: 5px 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -67,7 +66,7 @@
     display: flex; /* Default for larger screens */
     align-items: center;
     gap: 1.5rem;
-    flex-shrink: 0; /* Prevent search/login from shrinking too much */
+    flex-shrink: 0;
 }
 
 .nav-search input {
@@ -76,51 +75,31 @@
     border: none;
     outline: none;
     background-color: white;
-    width: 300px; /* Default width */
-    font-size: 1rem; /* Ensure font size is readable */
+    width: 300px;
+    font-size: 1rem;
 }
 
-.login-btn {
-    padding: 0.75rem 1.5rem; /* Adjusted padding for better sizing */
-    background-color: #d89b27;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1rem; /* Ensure font size is consistent */
-    white-space: nowrap; /* Prevent button text from wrapping */
-    transition: background-color 0.3s ease;
-}
-
-.login-btn a {
-    text-decoration: none;
-    color: white;
-}
-
-.login-btn:hover {
-    background-color: #785410;
-}
+/* Login button from global.css is used here, ensure consistency */
 
 /* Hamburger Menu Icon (hidden by default on desktop) */
 .hamburger-menu {
     display: none; /* Hide on large screens */
-    font-size: 1.8rem; /* Larger icon */
+    font-size: 1.8rem;
     color: #333;
     cursor: pointer;
-    z-index: 1001; /* Ensure it's above other elements */
+    z-index: 1001;
 }
 
 
-/* --- Responsive Adjustments --- */
+/* --- Responsive Adjustments for navbar.css --- */
 
-/* For screens smaller than 992px (typical tablet landscape/portrait) */
-@media (max-width: 992px) {
+/* Untuk layar yang lebih kecil dari 764px */
+@media (max-width: 764px) {
     .navbar {
-        justify-content: space-between; /* Push logo left, hamburger right */
-        padding: 0 15px; /* Adjust padding */
-        border-radius: 30px; /* Smaller border-radius */
-        width: calc(100% - 30px); /* Adjust width for smaller body padding */
+        justify-content: space-between;
+        padding: 0 15px;
+        border-radius: 30px;
+        width: calc(100% - 30px);
     }
 
     .nav-links,
@@ -134,87 +113,62 @@
 
     /* Styles for when the mobile menu is active */
     .nav-links.active {
-        display: flex; /* Show the nav links */
-        flex-direction: column; /* Stack them vertically */
+        display: flex;
+        flex-direction: column;
         position: absolute;
         top: 90px; /* Position below the navbar */
         left: 50%;
         transform: translateX(-50%);
         width: calc(100% - 60px); /* Slightly less than full width */
-        max-width: 300px; /* Cap max width */
-        background-color: #fefaf6; /* Background for the dropdown menu */
+        max-width: 300px;
+        background-color: #fefaf6;
         border-radius: 15px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         padding: 20px 0;
-        gap: 15px; /* Gap between stacked links */
-        align-items: center; /* Center items in the column */
+        gap: 15px;
+        align-items: center;
         border: 1px solid #ddd;
     }
 
     .nav-links.active a {
-        width: 80%; /* Make links wider in dropdown */
+        width: 80%;
         text-align: center;
         padding: 10px 0;
-        border-bottom: 1px solid #eee; /* Separator for links */
+        border-bottom: 1px solid #eee;
+        font-size: 16px; /* Adjusted for this breakpoint */
     }
     
     .nav-links.active a:last-child {
-        border-bottom: none; /* No separator for the last link */
+        border-bottom: none;
     }
 }
 
-/* For screens smaller than 768px (typical mobile landscape) */
-@media (max-width: 768px) {
-    .navbar {
-        height: 70px; /* Slightly smaller navbar height */
-        padding: 0 10px;
-        width: calc(100% - 20px);
-    }
-
-    .logo {
-        font-size: 1.3rem; /* Smaller logo font */
-    }
-
-    .hamburger-menu {
-        font-size: 1.6rem;
-    }
-
-    .nav-links.active {
-        top: 80px; /* Adjust dropdown position */
-        width: calc(100% - 40px); /* Wider for smaller screens */
-    }
-
-    .nav-links.active a {
-        font-size: 16px; /* Smaller link font in dropdown */
-    }
-}
-
-/* For screens smaller than 480px (most mobile phones) */
+/* Untuk layar yang sangat kecil, di bawah 480px (kebanyakan ponsel) */
 @media (max-width: 480px) {
     .navbar {
-        height: 60px; /* Even smaller navbar height */
-        border-radius: 20px; /* Smaller border-radius */
+        height: 60px;
+        border-radius: 20px;
         padding: 0 8px;
         margin: 0.8rem auto;
+        width: calc(100% - 20px); /* Adjusted for very small screens */
     }
 
     .logo {
-        font-size: 1.2rem; /* Smallest logo font */
+        font-size: 1.2rem;
     }
 
     .hamburger-menu {
-        font-size: 1.4rem; /* Smallest hamburger icon */
+        font-size: 1.4rem;
     }
 
     .nav-links.active {
-        top: 70px; /* Adjust dropdown position */
+        top: 70px;
         padding: 15px 0;
         gap: 10px;
-        width: calc(100% - 30px);
+        width: calc(100% - 40px); /* Adjusted for very small screens */
     }
 
     .nav-links.active a {
-        font-size: 15px; /* Smallest link font */
-        padding: 8px 0;
+        font-size: 15px;
     }
 }
