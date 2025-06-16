@@ -1,26 +1,20 @@
 /* Navbar */
 .navbar {
-    /* justify-self: center; */
-
-    position: sticky; 
+    position: sticky;
     top: 0;
-    left: 80px;
-    /* margin-left: 100px; */
-    /* transform: translateX(-40%); */
+    /* left: 80px; */ /* Remove fixed left position, let auto margins handle centering */
     z-index: 1000;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Default for larger screens */
     align-items: center;
-  
-    
-    background-color: #eee7de56; 
-    border-radius: 50px; 
-    margin: 1rem auto;
-    width: 100%;
-
-
+    background-color: #eee7de56;
+    border-radius: 50px;
+    margin: 1rem auto; /* Centers the navbar and adds vertical margin */
+    width: calc(100% - 40px); /* Adjust width to account for body padding if you have it, or use max-width and padding in a container */
+    max-width: 1200px; /* Limit max width on very large screens */
     height: 80px;
-    box-shadow: 0 4px 6px rgba(122, 99, 99, 0.1);    
+    box-shadow: 0 4px 6px rgba(122, 99, 99, 0.1);
+    padding: 0 20px; /* Add some padding inside the navbar */
 }
 
 /* Logo area */
@@ -30,6 +24,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-shrink: 0; /* Prevent logo from shrinking */
 }
 
 /* Icons in nav */
@@ -42,11 +37,11 @@
 
 /* Navigation links */
 .nav-links {
-    display: flex;
+    display: flex; /* Default for larger screens */
     align-items: center;
-    gap: 5rem;
-
-
+    gap: 5rem; /* Default for larger screens */
+    flex-grow: 1; /* Allow nav links to take available space */
+    justify-content: center; /* Center the links within their available space */
 }
 
 .nav-links a {
@@ -56,15 +51,23 @@
     font-size: 18px;
     display: flex;
     align-items: center;
-
-    
+    white-space: nowrap; /* Prevent link text from wrapping */
+    padding: 5px 10px; /* Add padding for better click area */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
+
+.nav-links a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
 
 /* Search and login */
 .nav-search {
-    display: flex;
+    display: flex; /* Default for larger screens */
     align-items: center;
     gap: 1.5rem;
+    flex-shrink: 0; /* Prevent search/login from shrinking too much */
 }
 
 .nav-search input {
@@ -73,26 +76,145 @@
     border: none;
     outline: none;
     background-color: white;
-    width: 300px;
+    width: 300px; /* Default width */
+    font-size: 1rem; /* Ensure font size is readable */
 }
 
 .login-btn {
-    padding: 0.4rem 1rem;
+    padding: 0.75rem 1.5rem; /* Adjusted padding for better sizing */
     background-color: #d89b27;
     color: #fff;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
-
-    
+    font-size: 1rem; /* Ensure font size is consistent */
+    white-space: nowrap; /* Prevent button text from wrapping */
+    transition: background-color 0.3s ease;
 }
 
-.login-btn a{
+.login-btn a {
     text-decoration: none;
     color: white;
 }
 
-.login-btn:hover{
+.login-btn:hover {
     background-color: #785410;
+}
+
+/* Hamburger Menu Icon (hidden by default on desktop) */
+.hamburger-menu {
+    display: none; /* Hide on large screens */
+    font-size: 1.8rem; /* Larger icon */
+    color: #333;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above other elements */
+}
+
+
+/* --- Responsive Adjustments --- */
+
+/* For screens smaller than 992px (typical tablet landscape/portrait) */
+@media (max-width: 992px) {
+    .navbar {
+        justify-content: space-between; /* Push logo left, hamburger right */
+        padding: 0 15px; /* Adjust padding */
+        border-radius: 30px; /* Smaller border-radius */
+        width: calc(100% - 30px); /* Adjust width for smaller body padding */
+    }
+
+    .nav-links,
+    .nav-search {
+        display: none; /* Hide full nav links and search/login on smaller screens */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger icon */
+    }
+
+    /* Styles for when the mobile menu is active */
+    .nav-links.active {
+        display: flex; /* Show the nav links */
+        flex-direction: column; /* Stack them vertically */
+        position: absolute;
+        top: 90px; /* Position below the navbar */
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 60px); /* Slightly less than full width */
+        max-width: 300px; /* Cap max width */
+        background-color: #fefaf6; /* Background for the dropdown menu */
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+        gap: 15px; /* Gap between stacked links */
+        align-items: center; /* Center items in the column */
+        border: 1px solid #ddd;
+    }
+
+    .nav-links.active a {
+        width: 80%; /* Make links wider in dropdown */
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee; /* Separator for links */
+    }
+    
+    .nav-links.active a:last-child {
+        border-bottom: none; /* No separator for the last link */
+    }
+}
+
+/* For screens smaller than 768px (typical mobile landscape) */
+@media (max-width: 768px) {
+    .navbar {
+        height: 70px; /* Slightly smaller navbar height */
+        padding: 0 10px;
+        width: calc(100% - 20px);
+    }
+
+    .logo {
+        font-size: 1.3rem; /* Smaller logo font */
+    }
+
+    .hamburger-menu {
+        font-size: 1.6rem;
+    }
+
+    .nav-links.active {
+        top: 80px; /* Adjust dropdown position */
+        width: calc(100% - 40px); /* Wider for smaller screens */
+    }
+
+    .nav-links.active a {
+        font-size: 16px; /* Smaller link font in dropdown */
+    }
+}
+
+/* For screens smaller than 480px (most mobile phones) */
+@media (max-width: 480px) {
+    .navbar {
+        height: 60px; /* Even smaller navbar height */
+        border-radius: 20px; /* Smaller border-radius */
+        padding: 0 8px;
+        margin: 0.8rem auto;
+    }
+
+    .logo {
+        font-size: 1.2rem; /* Smallest logo font */
+    }
+
+    .hamburger-menu {
+        font-size: 1.4rem; /* Smallest hamburger icon */
+    }
+
+    .nav-links.active {
+        top: 70px; /* Adjust dropdown position */
+        padding: 15px 0;
+        gap: 10px;
+        width: calc(100% - 30px);
+    }
+
+    .nav-links.active a {
+        font-size: 15px; /* Smallest link font */
+        padding: 8px 0;
+    }
 }
