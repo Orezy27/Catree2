@@ -41,6 +41,7 @@ input[type="password"] {
 
 .form p{
     font-size: 0.2rem;
+    color: grey;
 }
 
 .gender-buttons button:hover {
