@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catree - Fruit Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="path/to/your/logo.png" alt="Catree Logo"> <span>Catree</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-chart-line"></i> Nutrional Monitoring</a>
+                <a href="#"><i class="fas fa-store"></i> Marketplace</a>
+            </nav>
+            <div class="search-login">
+                <input type="text" placeholder="Search for catering">
+                <button class="login-button">Login</button>
+            </div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
 
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="fruit-hub-info">
+                    <img src="source/image 61.png" alt="Fruit Hub"> <div>
+                        <h1>Fruit Hub</h1>
+                        <p>More have fruits, Indonesian</p>
+                        <div class="location-rating">
+                            <span><i class="fas fa-map-marker-alt"></i> 0.52 km</span>
+                            <span><i class="fas fa-star"></i> 5.2 likes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="people-favorite">
+            <div class="container">
+                <h2>People's Favorite</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="source/image 61.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-details">
+                            <h3>Grilled Chicken Quinoa Bowl</h3>
+                            <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potato.</p>
+                            <p class="price">Rp12,000</p>
+                            <button class="buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container">
+                <h2>Products</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="source/image 61.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-details">
+                            <h3>Grilled Chicken Quinoa Bowl</h3>
+                            <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potato.</p>
+                            <p class="price">Rp12,000</p>
+                            <button class="buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="source/image 61.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-details">
+                            <h3>Grilled Chicken Quinoa Bowl</h3>
+                            <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potato.</p>
+                            <p class="price">Rp12,000</p>
+                            <button class="buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                     <div class="product-card">
+                        <img src="source/image 61.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-details">
+                            <h3>Grilled Chicken Quinoa Bowl</h3>
+                            <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potato.</p>
+                            <p class="price">Rp12,000</p>
+                            <button class="buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                     <div class="product-card">
+                        <img src="source/image 61.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-details">
+                            <h3>Grilled Chicken Quinoa Bowl</h3>
+                            <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potato.</p>
+                            <p class="price">Rp12,000</p>
+                            <button class="buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                     <div class="product-card">
+                        <img src="source/image 61.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-details">
+                            <h3>Grilled Chicken Quinoa Bowl</h3>
+                            <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potato.</p>
+                            <p class="price">Rp12,000</p>
+                            <button class="buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                     <div class="product-card">
+                        <img src="source/image 61.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-details">
+                            <h3>Grilled Chicken Quinoa Bowl</h3>
+                            <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potato.</p>
+                            <p class="price">Rp12,000</p>
+                            <button class="buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-sections">
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Product</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook"></i> Product</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Product</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Blog</h3>
+                    </div>
+                <div class="footer-branding">
+                    <h2>Catree</h2>
+                    <p>Healthy Food In One Solution</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
