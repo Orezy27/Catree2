@@ -6,12 +6,11 @@
 }
 
 body {
-    background-color: #fefaf6; 
+    background-color: #fefaf6;
     color: #333;
     width: 100%;
     font-family: 'Inria Serif', serif;
-    /* Tambahkan ini untuk mencegah scroll horizontal yang tidak diinginkan */
-    overflow-x: hidden; 
+    overflow-x: hidden; /* Mencegah scroll horizontal yang tidak diinginkan */
 }
 
 .container {
@@ -20,7 +19,6 @@ body {
     padding: 0 20px; /* Padding samping untuk desktop */
 }
 
-/* Styling untuk tombol login yang Anda berikan */
 .login-btn {
     background-color: #f4af2f;
     color: white;
@@ -32,33 +30,37 @@ body {
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    /* Tambahkan display: block dan margin auto untuk memusatkan jika sendirian */
-    display: block; 
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block; /* Agar bisa diatur dalam flexbox/inline context */
+    text-align: center; /* Untuk menengahkan teks/link di dalamnya */
+    line-height: 30px; /* Vertikal center teks */
+}
+
+.login-btn a {
+    text-decoration: none;
+    color: inherit; /* Warisi warna dari parent */
+    display: block; /* Agar link mengisi seluruh area tombol */
+    height: 100%;
+    width: 100%;
 }
 
 .login-btn:hover {
-    background-color: #d99820; /* Warna hover yang sedikit lebih gelap */
+    background-color: #d99820;
 }
 
 
 /* --- Responsive Adjustments for global.css --- */
 
-/* Untuk layar yang lebih kecil dari 768px (umumnya tablet potret dan ponsel) */
-@media (max-width: 768px) {
+/* Untuk layar yang lebih kecil dari 764px */
+@media (max-width: 764px) {
     .container {
         padding: 0 15px; /* Kurangi padding samping untuk layar yang lebih kecil */
     }
 
     .login-btn {
         width: 150px; /* Kecilkan lebar tombol login untuk layar yang lebih kecil */
-        height: 28px; /* Sesuaikan tinggi */
-        font-size: 0.9rem; /* Kecilkan ukuran font */
-        padding: 0.5rem 1.5rem; /* Sesuaikan padding jika diperlukan, meskipun height dan width sudah diatur */
-        /* Jika ini adalah tombol login yang ada di hero section, pastikan align-items: center di hero-right sudah ada */
-        margin-left: auto; /* Memastikan tetap di tengah jika di tata letak flex-direction: column */
-        margin-right: auto;
+        height: 28px;
+        font-size: 0.9rem;
+        line-height: 28px;
     }
 }
 
@@ -72,5 +74,6 @@ body {
         width: 120px; /* Lebih kecil lagi untuk ponsel */
         height: 25px;
         font-size: 0.8rem;
+        line-height: 25px;
     }
 }
