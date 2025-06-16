@@ -63,6 +63,10 @@ input[type="password"] {
     font-size: 0.9rem;
 }
 
+.form p{
+    font-size: 10px;
+}
+
 .gender-buttons button:hover {
     background-color: #d98d46 ;
     transition: 0.3s;
