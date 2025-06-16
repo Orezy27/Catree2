@@ -6,32 +6,71 @@
 }
 
 body {
-    /* font-family: 'Cormorant Garamond', serif; */
     background-color: #fefaf6; 
     color: #333;
     width: 100%;
-    /* height: 100%; */
-
     font-family: 'Inria Serif', serif;
+    /* Tambahkan ini untuk mencegah scroll horizontal yang tidak diinginkan */
+    overflow-x: hidden; 
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1200px; /* Lebar maksimum untuk desktop */
+    margin: 0 auto; /* Pusatkan container */
+    padding: 0 20px; /* Padding samping untuk desktop */
 }
 
+/* Styling untuk tombol login yang Anda berikan */
 .login-btn {
     background-color: #f4af2f;
     color: white;
     border: none;
-    /* padding: 0.75rem 2rem; */
     font-weight: bold;
     font-size: 1rem;
-
-    width: 200px;
+    width: 200px; /* Lebar tetap untuk desktop */
     height: 30px;
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    /* Tambahkan display: block dan margin auto untuk memusatkan jika sendirian */
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-btn:hover {
+    background-color: #d99820; /* Warna hover yang sedikit lebih gelap */
+}
+
+
+/* --- Responsive Adjustments for global.css --- */
+
+/* Untuk layar yang lebih kecil dari 768px (umumnya tablet potret dan ponsel) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px; /* Kurangi padding samping untuk layar yang lebih kecil */
+    }
+
+    .login-btn {
+        width: 150px; /* Kecilkan lebar tombol login untuk layar yang lebih kecil */
+        height: 28px; /* Sesuaikan tinggi */
+        font-size: 0.9rem; /* Kecilkan ukuran font */
+        padding: 0.5rem 1.5rem; /* Sesuaikan padding jika diperlukan, meskipun height dan width sudah diatur */
+        /* Jika ini adalah tombol login yang ada di hero section, pastikan align-items: center di hero-right sudah ada */
+        margin-left: auto; /* Memastikan tetap di tengah jika di tata letak flex-direction: column */
+        margin-right: auto;
+    }
+}
+
+/* Untuk layar yang sangat kecil, di bawah 480px (kebanyakan ponsel) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px; /* Padding yang lebih kecil lagi untuk layar yang sangat sempit */
+    }
+
+    .login-btn {
+        width: 120px; /* Lebih kecil lagi untuk ponsel */
+        height: 25px;
+        font-size: 0.8rem;
+    }
 }
