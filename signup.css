@@ -9,7 +9,7 @@
 
     /* Ini kunci untuk scroll: */
     height: auto;
-    max-height: auto; /* Batasi tinggi container agar tidak melebihi viewport (dikurangi padding body) */
+    max-height: 100%; /* Batasi tinggi container agar tidak melebihi viewport (dikurangi padding body) */
     overflow-y: auto; /* Aktifkan scroll vertikal jika konten melebihi max-height */
     -ms-overflow-style: none;  /* Hides scrollbar for IE and Edge */
     scrollbar-width: none;  /* Hides scrollbar for Firefox */
