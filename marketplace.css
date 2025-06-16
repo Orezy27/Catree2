@@ -2,14 +2,6 @@
 /* General Styles */
 
 
-.hamburger-menu {
-    display: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #555;
-}
-
-
 /* Hero Text Section */
 .hero-text {
     text-align: center;
