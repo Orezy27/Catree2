@@ -85,7 +85,7 @@
     cursor: pointer;
     font-weight: bold;
 
-    
+    align-items: center;
 }
 
 .login-btn a{
