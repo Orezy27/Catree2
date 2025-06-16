@@ -1,5 +1,5 @@
 .container {
-    background-color: #fff; /* Warna latar belakang form, asumsi putih */
+    background-color: none; /* Warna latar belakang form, asumsi putih */
     padding: 40px; /* Padding di dalam container form */
     border-radius: 15px; /* Sudut membulat */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
