@@ -65,15 +65,3 @@ body {
 }
 
 /* Untuk layar yang sangat kecil, di bawah 480px (kebanyakan ponsel) */
-@media (max-width: 480px) {
-    .container {
-        padding: 0 10px; /* Padding yang lebih kecil lagi untuk layar yang sangat sempit */
-    }
-
-    .login-btn {
-        width: 120px; /* Lebih kecil lagi untuk ponsel */
-        height: 25px;
-        font-size: 0.8rem;
-        line-height: 25px;
-    }
-}
