@@ -1,293 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Catree Navbar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="marketplace.css">
-  <link rel="stylesheet" href="global.css">
-  <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="footer.css">
-  <link rel="stylesheet" href="filter.css">
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catree - Food Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-   <header class="navbar" id="navbar"></header>
-
-  <section class="section-container">
-    <div class="heading-area">
-      <div class="small-title">
-        <span class="line"></span>
-        <span>Eat Better</span>
-        <span class="line"></span>
-      </div>
-      <h1 class="main-title">Live Better</h1>
-      <p class="description">
-        Find thoughtfully prepared meals that fit your lifestyle, nourish your body, and give
-        you the energy to do more of what you love.
-      </p>
-    </div>
-
-    <div class="category-buttons">
-      <button class="button active">All</button>
-      <button class="button">Breakfast</button>
-      <button class="button">Lunch</button>
-      <button class="button">Dinner</button>
-      <button class="button">Snack</button>
-    </div>
-  </section>
-
-    <section class="product-section">
-      <div class="all_filter">
-        <h2 class="page-title">All Product</h2>
-        <div class="filter-icon" onclick="toggleFilter()">☰ Filter</div>
-
-        <!-- Filter Panel -->
-        <div class="filter-panel" id="filterPanel">
-          <h2>FILTER</h2>
-
-          <h3>HARGA</h3>
-          <div class="checkbox-group">
-            <label class="checkbox-item"><input type="checkbox" name="harga" value="20000"> 20.000</label>
-            <label class="checkbox-item"><input type="checkbox" name="harga" value="30000"> 30.000</label>
-            <label class="checkbox-item"><input type="checkbox" name="harga" value="40000"> 40.000</label>
-            <label class="checkbox-item"><input type="checkbox" name="harga" value="50000"> 50.000</label>
-          </div>
-
-          <h3>Tujuan Konsumsi</h3>
-          <div class="checkbox-group">
-            <label class="checkbox-item"><input type="checkbox" name="tujuan" value="diet"> DIET</label>
-            <label class="checkbox-item"><input type="checkbox" name="tujuan" value="bulking"> BULKING</label>
-            <label class="checkbox-item"><input type="checkbox" name="tujuan" value="cutting"> CUTTING</label>
-          </div>
-
-          <h3>Kandungan Kalori</h3>
-          <div class="checkbox-group">
-            <label class="checkbox-item"><input type="checkbox" name="kalori" value="200-500"> 200 - 500 kal</label>
-            <label class="checkbox-item"><input type="checkbox" name="kalori" value="100-250"> 100 - 250 kal</label>
-          </div>
-
-          <h3>ALERGI</h3>
-          <div class="checkbox-group">
-            <label class="checkbox-item"><input type="checkbox" name="alergi" value="kacang"> Kacang-Kacangan</label>
-            <label class="checkbox-item"><input type="checkbox" name="alergi" value="susu"> Susu Sapi</label>
-            <label class="checkbox-item"><input type="checkbox" name="alergi" value="telur"> Telur</label>
-            <label class="checkbox-item"><input type="checkbox" name="alergi" value="kedelai"> Kedelai</label>
-            <label class="checkbox-item"><input type="checkbox" name="alergi" value="ikan"> Ikan</label>
-            <label class="checkbox-item"><input type="checkbox" name="alergi" value="kerang"> Kerang/Udang</label>
-            <label class="checkbox-item"><input type="checkbox" name="alergi" value="gandum"> Gandum</label>
-          </div>
-
-          <input class="input-user" type="text" placeholder="Inputan user...">
-
-          <button class="save-btn">SAVE</button>
-        </div>
-      </div>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="productimg.jpg" alt="Food Image">
-        <div class="product-info">
-          <h3>Grilled Chicken Quinoa Bowl</h3>
-          <p>A balanced, protein-rich bowl with grilled chicken, quinoa, spinach, and roasted sweet potatoes.</p>
-          <div class="product-footer">
-            <span class="price">Rp25.000</span>
-            <button class="buy-button"><a href="ingredients.html">Buy Now</a></button>
-          </div>
-        </div>
-      </div>
-
-           
-
-        
-    </div>
-
-    
-    <!-- Pagination -->
-    <div class="pagination">
-      <span class="page-number active">1</span>
-      <span class="page-number">2</span>
-    </div>
-  </section>
-
-  <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#">Contact</a>
-                <a href="#">About Us</a>
-                <a href="#">Product</a>
-                <a href="#">Blog</a>
-                <div class="underline"></div>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/catree-logo.png" alt="Catree Logo"> <span>Catree</span>
             </div>
-
-            <div class="footer-socials">
-                <div class="social-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail">
-                    <span>Product</span>
-                </div>
-                <div class="social-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-                    <span>Product</span>
-                </div>
-                <div class="social-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                    <span>Product</span>
-                </div>
+            <nav class="nav-links">
+                <a href="#"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-chart-line"></i> Nutrional Monitoring</a>
+                <a href="#"><i class="fas fa-store"></i> Marketplace</a>
+            </nav>
+            <div class="search-login">
+                <input type="text" placeholder="Search for catering">
+                <button class="login-button">Login</button>
+            </div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
+    </header>
 
-        <div class="footer-brand">
-            <h1>Catree</h1>
-            <p>Healthy Food In One Solution</p>
+    <main>
+        <section class="hero-text">
+            <div class="container">
+                <p class="tagline-small">Eat Better</p>
+                <h1 class="tagline-large">Live Better</h1>
+                <p class="tagline-description">
+                    Find thoughtfully recipes meals that fit your lifestyle, nourish your body, and give
+                    you the energy to make the most of your day.
+                </p>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <div class="category-buttons">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="breakfast">Breakfast</button>
+                    <button class="category-btn" data-category="lunch">Lunch</button>
+                    <button class="category-btn" data-category="dinner">Dinner</button>
+                    <button class="category-btn" data-category="snack">Snack</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>All Product</h2>
+                    <button class="view-toggle-btn"><i class="fas fa-th-list"></i></button> </div>
+                <div class="product-grid">
+                    <div class="product-card" data-category="all lunch dinner">
+                        <img src="images/grilled-chicken-quinoa.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="all breakfast">
+                        <img src="images/grilled-chicken-quinoa.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="all snack">
+                        <img src="images/grilled-chicken-quinoa.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="all dinner">
+                        <img src="images/grilled-chicken-quinoa.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="all breakfast lunch">
+                        <img src="images/grilled-chicken-quinoa.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="all dinner">
+                        <img src="images/grilled-chicken-quinoa.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="all snack">
+                        <img src="images/grilled-chicken-quinoa.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="all breakfast">
+                        <img src="images/grilled-chicken-quinoa.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                     <div class="product-card" data-category="all lunch">
+                        <img src="images/grilled-chicken-quinoa.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                     <div class="product-card" data-category="all dinner">
+                        <img src="images/grilled-chicken-quinoa.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                     <div class="product-card" data-category="all snack">
+                        <img src="images/grilled-chicken-quinoa.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                     <div class="product-card" data-category="all breakfast">
+                        <img src="images/grilled-chicken-quinoa.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-sections">
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Product</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook"></i> Product</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Product</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Blog</h3>
+                    </div>
+                <div class="footer-branding">
+                    <h2>Catree</h2>
+                    <p>Healthy Food In One Solution</p>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="footer.js"></script>
-    <script src="filter.js"></script>
-    <script src="navbar.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
