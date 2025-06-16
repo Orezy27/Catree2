@@ -496,7 +496,7 @@
 /* global.css dan navbar.css dan footer.css juga perlu diperiksa */
 
 /* Contoh dasar untuk global.css agar padding/margin konsisten */
-body {
+/* body {
     margin: 0;
     font-family: "Inria Serif", serif; /* Gunakan font yang sudah diimpor */
     line-height: 1.6;
@@ -520,4 +520,4 @@ body {
 
 .login-btn:hover {
     background-color: #e09700;
-}
+} */
