@@ -2,6 +2,7 @@
 .navbar {
     position: sticky;
     top: 0;
+    left: 0;
     z-index: 1000;
     display: flex;
     justify-content: center; /* Default for larger screens to distribute elements */
