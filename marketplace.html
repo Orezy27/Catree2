@@ -12,6 +12,24 @@
 </head>
 <body>
     <header class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/catree-logo.png" alt="Catree Logo"> 
+                <span>Catree</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-chart-line"></i> Nutrional Monitoring</a>
+                <a href="#"><i class="fas fa-store"></i> Marketplace</a>
+            </nav>
+            <div class="search-login">
+                <input type="text" placeholder="Search for catering">
+                <button class="login-button">Login</button>
+            </div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -42,206 +60,169 @@
             <div class="container">
                 <div class="section-header">
                     <h2>All Product</h2>
-                    <button class="view-toggle-btn"><i class="fas fa-th-list"></i></button> </div>
+                    <div class="header-actions">
+                        <button class="filter-toggle-btn"><i class="fas fa-filter"></i> Filter</button> 
+                        <button class="view-toggle-btn"><i class="fas fa-th-list"></i></button> 
+                    </div>
+                </div>
+
+                <div class="filter-panel" id="filterPanel">
+                    <h3>Filter Options</h3>
+                    <div class="filter-group">
+                        <h4>Dietary</h4>
+                        <label><input type="checkbox" name="dietary" value="vegetarian"> Vegetarian</label>
+                        <label><input type="checkbox" name="dietary" value="vegan"> Vegan</label>
+                        <label><input type="checkbox" name="dietary" value="gluten-free"> Gluten-Free</label>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Rating</h4>
+                        <label><input type="radio" name="rating" value="4-plus"> 4+ Stars</label>
+                        <label><input type="radio" name="rating" value="3-plus"> 3+ Stars</label>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <input type="range" min="0" max="100000" value="100000" class="price-range-slider" id="priceRange">
+                        <p>Max Price: <span id="currentPrice">Rp100,000</span></p>
+                    </div>
+                    <div class="filter-actions">
+                        <button class="apply-filter-btn">Apply Filter</button>
+                        <button class="reset-filter-btn">Reset</button>
+                    </div>
+                </div>
+
                 <div class="product-grid">
                     <a href="marketCard.html">
-                    <div class="product-card" data-category="all lunch dinner">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                      <a href="marketCard.html">
-                    <div class="product-card" data-category="all breakfast">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                      <a href="marketCard.html">
-                    <div class="product-card" data-category="all breakfast">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                      <a href="marketCard.html">
-                    <div class="product-card" data-category="all breakfast">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                      <a href="marketCard.html">
-                    <div class="product-card" data-category="all dinner">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                      <a href="marketCard.html">
-                    <div class="product-card" data-category="all dinner">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                      <a href="marketCard.html">
-                    <div class="product-card" data-category="all dinner">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                      <a href="marketCard.html">
-                    <div class="product-card" data-category="all lunch ">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                      <a href="marketCard.html">
-                    <div class="product-card" data-category="all lunch ">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                      <a href="marketCard.html">
-                    <div class="product-card" data-category="all lunch">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                      <a href="marketCard.html">
-                    <div class="product-card" data-category="all snack">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                      <a href="marketCard.html">
-                    <div class="product-card" data-category="all snack">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                      <a href="marketCard.html">
-                    <div class="product-card" data-category="all dinner">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                      <a href="marketCard.html">
-                    <div class="product-card" data-category="all dinner">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
-                    </div>
-                    </a>
-
-                         <a href="marketCard.html">
-                    <div class="product-card" data-category="all dinner">
-                        
-                            <img src="image 62.png" alt="Grilled Chicken Quinoa Bowl">
-                            <div class="product-info">
-                                <h3>Fruit Hub</h3>
-                                <p class="description">More Sauce Fruits</p>
-                                <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
-                            </div>
-                      
+                    <div class="product-card" data-category="all lunch dinner" data-dietary="vegetarian" data-rating="4" data-price="12000">
+                        <img src="images/image 62.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
                     </div>
                     </a>
                     
-
-                    
+                    <a href="marketCard.html">
+                    <div class="product-card" data-category="all breakfast" data-dietary="vegan" data-rating="5" data-price="15000">
+                        <img src="images/image 62.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
                     </div>
+                    </a>
+
+                    <a href="marketCard.html">
+                    <div class="product-card" data-category="all breakfast" data-dietary="gluten-free" data-rating="3" data-price="10000">
+                        <img src="images/image 62.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    </a>
+                    
+                    <a href="marketCard.html">
+                    <div class="product-card" data-category="all breakfast" data-dietary="vegetarian" data-rating="4" data-price="13500">
+                        <img src="images/image 62.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    </a>
+
+                    <a href="marketCard.html">
+                    <div class="product-card" data-category="all dinner" data-dietary="vegan" data-rating="5" data-price="18000">
+                        <img src="images/image 62.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    </a>
+
+                    <a href="marketCard.html">
+                    <div class="product-card" data-category="all dinner" data-dietary="gluten-free" data-rating="3" data-price="11000">
+                        <img src="images/image 62.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    </a>
+
+                    <a href="marketCard.html">
+                    <div class="product-card" data-category="all dinner" data-dietary="vegetarian" data-rating="4" data-price="14000">
+                        <img src="images/image 62.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    </a>
+                    
+                    <a href="marketCard.html">
+                    <div class="product-card" data-category="all lunch " data-dietary="vegan" data-rating="5" data-price="16000">
+                        <img src="images/image 62.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    </a>
+
+                    <a href="marketCard.html">
+                    <div class="product-card" data-category="all lunch " data-dietary="gluten-free" data-rating="3" data-price="9000">
+                        <img src="images/image 62.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    </a>
+
+                    <a href="marketCard.html">
+                    <div class="product-card" data-category="all lunch" data-dietary="vegetarian" data-rating="4" data-price="12500">
+                        <img src="images/image 62.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    </a>
+
+                    <a href="marketCard.html">
+                    <div class="product-card" data-category="all snack" data-dietary="vegan" data-rating="5" data-price="8000">
+                        <img src="images/image 62.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    </a>
+
+                    <a href="marketCard.html">
+                    <div class="product-card" data-category="all snack" data-dietary="gluten-free" data-rating="3" data-price="7000">
+                        <img src="images/image 62.png" alt="Grilled Chicken Quinoa Bowl">
+                        <div class="product-info">
+                            <h3>Fruit Hub</h3>
+                            <p class="description">More Sauce Fruits</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 0.52 km</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -281,4 +262,3 @@
     <script src="marketplace.js"></script>
     <script src="navbar.js"></script>
 </body>
-</html>
