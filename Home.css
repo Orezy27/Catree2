@@ -1,18 +1,19 @@
 /* Hero Section */
 .hero {
     display: flex;
-    /* align-items: center; */
+    /* align-items: center; */ /* Ini bisa dihilangkan jika flex-direction berubah */
     padding: 2rem;
-    
     gap: 2rem;
+    flex-wrap: wrap; /* Tambahkan ini agar bisa bungkus ke bawah */
+    justify-content: center; /* Pusatkan konten saat wrap */
 }
 
 .hero-left {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1 1 auto; /* Memungkinkan flex item ini tumbuh dan menyusut */
 }
-
 
 .main-img {
     width: 100%;
@@ -26,10 +27,11 @@
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
+    flex-wrap: wrap; /* Agar thumbnail juga responsif */
 }
 
 .thumbnail {
-    width: 148px;
+    width: 148px; /* Ukuran default */
     height: 168px;
     object-fit: cover;
     border-radius: 12px;
@@ -38,13 +40,15 @@
 
 .hero-right {
     max-width: 800px;
-    padding-top: 100px;
+    padding-top: 100px; /* Pertahankan padding untuk desktop */
     color: #333;
+    flex: 1 1 auto; /* Memungkinkan flex item ini tumbuh dan menyusut */
 }
 
 .hero-right h1 {
-    font-size: 100px;
-    font-weight: 00;
+    font-size: 100px; /* Ukuran default */
+    font-weight: 700; /* Perbaiki typo, seharusnya angka */
+    line-height: 1.1; /* Tambahkan line-height untuk keterbacaan */
 }
 
 .hero-right em {
@@ -54,11 +58,22 @@
 
 .hero-right p {
     margin: 1rem 0;
-    font-size: 25px;
+    font-size: 25px; /* Ukuran default */
     line-height: 1.6;
 }
 
-
+/* Tombol Login (pastikan stylingnya konsisten) */
+.login-btn {
+    background-color: #ffaa00; /* Contoh warna */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Beri jarak dari paragraf */
+}
 
 .login-btn:hover {
     background-color: #d99820;
@@ -69,9 +84,13 @@
     text-align: center;
     background-color: #DDD08F; 
     padding: 4rem 2rem; 
-
     width: 100%;
-    height: 776px;
+    /* height: 776px; */ /* Hapus height tetap ini untuk responsif */
+    min-height: 500px; /* Biarkan min-height jika diperlukan, tapi lebih baik biarkan konten menentukan */
+    display: flex; /* Tambahkan flexbox untuk centering konten */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .features h2 {
@@ -89,29 +108,25 @@
 
 .feature-tiles {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center; /* Ubah ke center untuk responsif */
     flex-wrap: wrap;
-
     margin-top: 100px;
-    /* gap: 3rem;  */
+    gap: 3rem; /* Pertahankan gap agar ada jarak */
 }
 
 .tile {
     background-color: #ECDEA8;
-    
     padding: 2rem;
     border-radius: 24px;
     box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.1);
-
-    width: 263px;
-    height: 327px;
-
+    width: 263px; /* Ukuran tetap untuk desktop */
+    height: 327px; /* Ukuran tetap untuk desktop */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; 
-    /* height: 240px;  */
     transition: transform 0.3s ease;
+    flex-shrink: 0; /* Pastikan tile tidak menyusut di bawah ukuran ini */
 }
 
 .tile a{
@@ -126,6 +141,7 @@
 .tile img {
     width: 213px;
     height: 215px;
+    object-fit: contain; /* Gunakan contain agar gambar tidak terpotong */
     margin-bottom: 1rem;
 }
 
@@ -139,19 +155,19 @@
 .mission {
     display: flex;
     flex-wrap: wrap;
-
     width: 100%;
-    height: 776px;
-    align-items: flex-start;
+    /* height: 776px; */ /* Hapus height tetap ini */
+    min-height: 600px; /* opsional, min-height agar tidak terlalu pendek */
+    align-items: center; /* Ubah ke center agar gambar dan teks sejajar vertikal */
     justify-content: center;
     padding: 3rem 2rem;
-    /* background-color: #F4EDE4; */
     gap: 5rem;
 }
 
 .mission-image {
     max-width: 463px;
-    width: 100%;
+    width: 100%; /* Penting untuk responsif */
+    height: auto; /* Pastikan tinggi otomatis */
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
@@ -165,26 +181,23 @@
 .mission-text h2 {
     font-size: 50px;
     line-height: 1.4;
-    
     margin-bottom: 1.5rem;
     color: #333;
 }
 
 .mission-points {
     list-style: none;
-
     padding: 0;
     margin: 0;
 }
 
 .mission-points li {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Ubah ke flex-start agar ikon sejajar atas dengan teks */
     margin-bottom: 1.2rem;
     font-size: 20px;
     line-height: 1.5;
     color: #444;
-
     margin-top: 40px;
 }
 
@@ -192,7 +205,7 @@
     width: 54px;
     height: 54px;
     margin-right: 0.75rem;
-    margin-top: 0.25rem;
+    margin-top: 0.25rem; /* Menyesuaikan sedikit posisi ikon */
     flex-shrink: 0;
 }
 
@@ -200,13 +213,13 @@
 .cta {
     display: flex;
     align-items: center;
-    justify-content: flex-end; 
+    justify-content: center; /* Ubah ke center untuk responsif */
     background-color: #3f3c4e;
     color: #fff;
-    margin-right: 40px;
-
+    margin-right: 0; /* Hapus margin-right tetap */
     width: 100%;
-    height: 776px;
+    /* height: 776px; */ /* Hapus height tetap ini */
+    min-height: 600px; /* opsional, min-height agar tidak terlalu pendek */
     padding: 3rem 2rem;
     flex-wrap: wrap;
     gap: 5rem; 
@@ -216,13 +229,11 @@
 .cta-text {
     flex: 1 1 45%;
     max-width: 600px;
-    text-align: right;
+    text-align: right; /* Default untuk desktop */
 }
 
 .cta-text h2 {
     font-size: 50px;
-    /* font-weight: 700; */
-    /* font-family: 'Inria Serif', serif; */
     line-height: 1.2;
     margin-bottom: 1rem;
     color: #DDD08F;
@@ -239,7 +250,6 @@
 .cta-text a {
     font-weight: 600;
     color: #fff;
-
     font-size: 20px;
     text-decoration: none;
     padding-bottom: 2px;
@@ -257,33 +267,257 @@
     width: 100%;
     height: auto;
     border-radius: 16px;
+    object-fit: cover;
 }
-/* Footer */
+
+/* Footer (Pastikan sudah responsif di footer.css, jika belum perlu ditambahkan) */
 
 
 /* Responsive */
-@media (max-width: 768px) {
-    .mission, .cta {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .cta-text, .cta img {
-        max-width: 100%;
-    }
-
-    .feature-tiles {
-        flex-direction: column;
-        align-items: center;
-    }
-
-      .hero {
-        flex-direction: column;
-        align-items: center;
+/* Untuk tablet dan ponsel (lebar layar kurang dari 992px, biasanya tablet dimulai dari sini) */
+@media (max-width: 992px) {
+    /* Hero Section */
+    .hero {
+        flex-direction: column; /* Tumpuk konten ke bawah */
+        padding: 1.5rem;
+        gap: 1.5rem;
     }
 
     .hero-right {
+        padding-top: 20px; /* Kurangi padding atas */
+        text-align: center; /* Tengahkan teks */
+    }
+
+    .hero-right h1 {
+        font-size: 60px; /* Kecilkan ukuran font untuk tablet */
+    }
+
+    .hero-right p {
+        font-size: 20px; /* Kecilkan ukuran font paragraf */
+    }
+
+    .thumbnail {
+        width: 100px; /* Kecilkan thumbnail */
+        height: 110px;
+    }
+
+    /* Features Section */
+    .features {
+        padding: 3rem 1rem;
+        /* height: auto; */ /* Pastikan tidak ada tinggi tetap */
+    }
+
+    .features h2 {
+        font-size: 40px;
+    }
+
+    .features p {
+        font-size: 20px;
+    }
+
+    .feature-tiles {
+        flex-direction: column; /* Tumpuk tile ke bawah */
+        align-items: center; /* Pusatkan tile */
+        gap: 2rem; /* Kurangi gap antar tile */
+        margin-top: 50px;
+    }
+
+    .tile {
+        width: 200px; /* Kecilkan lebar tile */
+        height: 250px; /* Kecilkan tinggi tile */
+        padding: 1.5rem;
+    }
+    
+    .tile img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Mission Section */
+    .mission {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+        gap: 2.5rem;
+        /* height: auto; */
+    }
+
+    .mission-image {
+        max-width: 80%; /* Batasi lebar gambar agar tidak terlalu besar di tablet */
+    }
+
+    .mission-text {
+        min-width: unset; /* Hapus min-width */
+        text-align: left; /* Biarkan teks dalam mission-text tetap rata kiri jika ikon di kiri */
+    }
+    
+    .mission-text h2 {
+        font-size: 40px;
+        text-align: center; /* Tengahkan judul di tablet */
+    }
+
+    .mission-points li {
+        font-size: 18px;
+        margin-top: 20px;
+        justify-content: flex-start; /* Pastikan ikon tetap di kiri saat teks panjang */
+    }
+
+    /* CTA Section */
+    .cta {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+        gap: 2.5rem;
+        margin-right: 0; /* Hapus margin-right */
+        /* height: auto; */
+    }
+
+    .cta-text {
+        flex: 1 1 100%; /* Ambil lebar penuh */
+        text-align: center; /* Tengahkan teks */
+    }
+
+    .cta-text h2 {
+        font-size: 40px;
+    }
+
+    .cta-text p {
+        font-size: 20px;
+    }
+
+    .cta img {
+        flex: 1 1 100%; /* Ambil lebar penuh */
+        max-width: 90%; /* Batasi lebar gambar agar tidak terlalu besar */
+    }
+}
+
+/* Untuk ponsel (lebar layar kurang dari 576px) */
+@media (max-width: 576px) {
+    /* Hero Section */
+    .hero {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .hero-right h1 {
+        font-size: 45px; /* Lebih kecil untuk ponsel */
+    }
+
+    .hero-right p {
+        font-size: 18px; /* Lebih kecil untuk ponsel */
+    }
+
+    .thumbnail-container {
+        flex-wrap: wrap; /* Pastikan bungkus */
+        gap: 0.5rem;
+    }
+
+    .thumbnail {
+        width: 80px; /* Kecilkan lagi thumbnail */
+        height: 90px;
+    }
+
+    /* Features Section */
+    .features {
+        padding: 2rem 0.5rem;
+    }
+
+    .features h2 {
+        font-size: 30px;
+    }
+
+    .features p {
+        font-size: 16px;
+    }
+
+    .tile {
+        width: 180px; /* Ukuran tile lebih kecil */
+        height: 220px;
+        padding: 1rem;
+    }
+
+    .tile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .tile p {
+        font-size: 1.1rem;
+    }
+
+    /* Mission Section */
+    .mission {
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+    
+    .mission-text h2 {
+        font-size: 30px;
+    }
+
+    .mission-points li {
+        font-size: 16px;
+        margin-top: 15px;
+        flex-direction: column; /* Tumpuk ikon di atas teks untuk ruang yang lebih baik */
+        align-items: center;
         text-align: center;
     }
 
+    .mission-points .icon {
+        margin-right: 0; /* Hapus margin kanan */
+        margin-bottom: 10px; /* Tambahkan margin bawah */
+    }
+
+    /* CTA Section */
+    .cta {
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .cta-text h2 {
+        font-size: 30px;
+    }
+
+    .cta-text p {
+        font-size: 16px;
+    }
+
+    .cta-text a {
+        font-size: 18px;
+    }
+
+    .cta img {
+        max-width: 95%; /* Agak lebih besar di ponsel */
+    }
+}
+
+/* Pastikan elemen navbar dan footer Anda juga responsif melalui file CSS mereka sendiri */
+/* global.css dan navbar.css dan footer.css juga perlu diperiksa */
+
+/* Contoh dasar untuk global.css agar padding/margin konsisten */
+body {
+    margin: 0;
+    font-family: "Inria Serif", serif; /* Gunakan font yang sudah diimpor */
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* Contoh dasar untuk login-btn jika belum ada di global.css */
+.login-btn {
+    background-color: #ffaa00; /* Warna yang lebih cerah untuk tombol */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Jika digunakan pada tag <a> */
+    display: inline-block; /* Jika digunakan pada tag <a> */
+}
+
+.login-btn:hover {
+    background-color: #e09700;
 }
