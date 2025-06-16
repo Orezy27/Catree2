@@ -4,7 +4,7 @@
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-around; /* Default for larger screens to distribute elements */
+    justify-content: center; /* Default for larger screens to distribute elements */
     align-items: center;
     background-color: #eee7de56;
     border-radius: 50px;
