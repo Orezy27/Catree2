@@ -11,6 +11,9 @@ body {
     width: 100%;
     font-family: 'Inria Serif', serif;
     overflow-x: hidden; /* Mencegah scroll horizontal yang tidak diinginkan */
+    /* Tambahkan ini untuk memastikan body tidak memiliki padding/margin yang aneh secara default */
+    margin: 0; 
+    padding: 0;
 }
 
 .container {
@@ -30,15 +33,15 @@ body {
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    display: inline-block; /* Agar bisa diatur dalam flexbox/inline context */
-    text-align: center; /* Untuk menengahkan teks/link di dalamnya */
-    line-height: 30px; /* Vertikal center teks */
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
 }
 
 .login-btn a {
     text-decoration: none;
-    color: inherit; /* Warisi warna dari parent */
-    display: block; /* Agar link mengisi seluruh area tombol */
+    color: inherit;
+    display: block;
     height: 100%;
     width: 100%;
 }
@@ -47,17 +50,16 @@ body {
     background-color: #d99820;
 }
 
-
 /* --- Responsive Adjustments for global.css --- */
 
 /* Untuk layar yang lebih kecil dari 764px */
 @media (max-width: 764px) {
     .container {
-        padding: 0 15px; /* Kurangi padding samping untuk layar yang lebih kecil */
+        padding: 0 15px;
     }
 
     .login-btn {
-        width: 150px; /* Kecilkan lebar tombol login untuk layar yang lebih kecil */
+        width: 150px;
         height: 28px;
         font-size: 0.9rem;
         line-height: 28px;
@@ -65,3 +67,15 @@ body {
 }
 
 /* Untuk layar yang sangat kecil, di bawah 480px (kebanyakan ponsel) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .login-btn {
+        width: 120px;
+        height: 25px;
+        font-size: 0.8rem;
+        line-height: 25px;
+    }
+}
