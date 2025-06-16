@@ -1,3 +1,7 @@
+body{
+    background-image:url(background.png);
+}
+
 .container {
     background-color: none; /* Warna latar belakang form, asumsi putih */
     padding: 40px; /* Padding di dalam container form */
