@@ -8,6 +8,7 @@
     text-align: left; /* Teks rata kiri di dalam form */
 
     /* Ini kunci untuk scroll: */
+    height: auto;
     max-height: calc(100vh - 40px); /* Batasi tinggi container agar tidak melebihi viewport (dikurangi padding body) */
     overflow-y: auto; /* Aktifkan scroll vertikal jika konten melebihi max-height */
     -ms-overflow-style: none;  /* Hides scrollbar for IE and Edge */
