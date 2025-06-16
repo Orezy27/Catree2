@@ -6,8 +6,8 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap; /* Already good for responsiveness */
-    gap: 30px; /* Add a default gap to prevent elements from touching */
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .footer-content {
@@ -16,28 +16,26 @@
     gap: 20px;
     width: 900px; /* Default width for larger screens */
     margin-top: 10px;
-    flex-grow: 1; /* Allow content to grow and take available space */
-    flex-shrink: 1; /* Allow content to shrink */
-    flex-basis: auto; /* Default flex-basis */
-    /* Remove fixed margin-left if you want it to be truly responsive */
-    /* margin-left: 100px; */ 
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
 }
 
 .footer-links {
     display: flex;
     justify-content: space-between;
-    font-size: 30px; /* Default font size */
+    font-size: 30px;
     margin-bottom: 25px;
     position: relative;
     width: 100%;
-    flex-wrap: wrap; /* Ensure links wrap if space is tight */
-    gap: 15px; /* Gap between links when wrapped */
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .footer-links a {
     color: white;
     text-decoration: none;
-    white-space: nowrap; /* Prevent link text from breaking */
+    white-space: nowrap;
 }
 
 .footer-links .underline {
@@ -52,156 +50,105 @@
 
 .footer-socials {
     display: flex;
-    width: 100%; /* Take full width within footer-content */
-    gap: 100px; /* Default gap for larger screens */
-    flex-wrap: wrap; /* Allow social items to wrap */
-    justify-content: flex-start; /* Align to start for desktop, can change for mobile */
+    width: 100%;
+    gap: 100px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .social-item {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 20px; /* Default font size */
+    font-size: 20px;
 }
 
 .social-item img {
-    width: 40px; /* Default icon size */
+    width: 40px;
     height: 40px;
 }
 
 .footer-brand {
-    text-align: right; /* Default for desktop */
-    margin-right: 100px; /* Default margin for desktop */
-    flex-grow: 1; /* Allow brand to grow */
-    flex-shrink: 0; /* Prevent brand from shrinking too much, keep its content visible */
-    flex-basis: auto; /* Default flex-basis */
-    min-width: 200px; /* Ensure a minimum width for the brand section */
+    text-align: right;
+    margin-right: 100px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    min-width: 200px;
 }
 
 .footer-brand h1 {
-    font-size: 100px; /* Default font size */
+    font-size: 100px;
     margin: 0;
     color: white;
 }
 
 .footer-brand p {
-    font-size: 20px; /* Default font size */
+    font-size: 20px;
     color:#ccc;
 }
 
-/* --- Responsive Adjustments --- */
+/* --- Responsive Adjustments for footer.css --- */
 
-/* For screens smaller than 992px (typical tablet landscape/portrait) */
-@media (max-width: 992px) {
+/* Untuk layar yang lebih kecil dari 764px */
+@media (max-width: 764px) {
     .footer {
         padding: 30px 15px;
-        flex-direction: column; /* Stack columns vertically */
-        align-items: center; /* Center items when stacked */
-        gap: 40px; /* Increase gap between stacked sections */
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
     }
 
     .footer-content {
-        width: 100%; /* Take full width */
-        max-width: 600px; /* Cap max width for readability */
-        margin-left: 0; /* Remove specific left margin */
-        order: 2; /* Put content below brand on smaller screens */
+        width: 100%;
+        max-width: 600px;
+        margin-left: 0;
+        order: 2;
     }
 
     .footer-links {
-        font-size: 24px; /* Slightly smaller font */
-        justify-content: space-around; /* Distribute links more evenly */
-        gap: 10px 20px; /* Row and column gap */
-        margin-bottom: 15px; /* Reduce bottom margin */
+        font-size: 24px;
+        justify-content: space-around;
+        gap: 10px 20px;
+        margin-bottom: 15px;
     }
     
     .footer-links .underline {
-        bottom: -15px; /* Adjust underline position */
+        bottom: -15px;
     }
 
     .footer-socials {
-        gap: 50px; /* Reduce social icon gap */
-        justify-content: center; /* Center social icons */
+        gap: 50px;
+        justify-content: center;
     }
 
     .social-item {
-        font-size: 18px; /* Slightly smaller font */
+        font-size: 18px;
     }
 
     .social-item img {
-        width: 35px; /* Slightly smaller icon size */
+        width: 35px;
         height: 35px;
     }
 
     .footer-brand {
-        text-align: center; /* Center align brand text */
-        margin-right: 0; /* Remove specific right margin */
-        order: 1; /* Put brand above content on smaller screens */
+        text-align: center;
+        margin-right: 0;
+        order: 1;
         width: 100%;
-        max-width: 400px; /* Limit brand width */
+        max-width: 400px;
     }
 
     .footer-brand h1 {
-        font-size: 70px; /* Smaller font for brand heading */
+        font-size: 70px;
     }
 
     .footer-brand p {
-        font-size: 18px; /* Smaller font for brand paragraph */
+        font-size: 18px;
     }
 }
 
-/* For screens smaller than 768px (typical tablet portrait and mobile landscape) */
-@media (max-width: 768px) {
-    .footer {
-        padding: 25px 10px;
-        gap: 30px;
-    }
-
-    .footer-content {
-        gap: 15px;
-    }
-
-    .footer-links {
-        font-size: 20px; /* Even smaller font */
-        flex-direction: column; /* Stack links vertically */
-        align-items: center; /* Center stacked links */
-        gap: 10px; /* Gap between stacked links */
-        margin-bottom: 10px;
-    }
-
-    .footer-links a {
-        padding: 5px 0; /* Add some vertical padding to stacked links */
-    }
-
-    .footer-links .underline {
-        bottom: -10px; /* Further adjust underline */
-    }
-
-    .footer-socials {
-        gap: 30px; /* Further reduce social icon gap */
-        justify-content: center; /* Ensure centered */
-        flex-wrap: wrap; /* Keep wrapping in case of many items */
-    }
-
-    .social-item {
-        font-size: 16px; /* Smaller font */
-    }
-
-    .social-item img {
-        width: 30px; /* Smaller icon size */
-        height: 30px;
-    }
-
-    .footer-brand h1 {
-        font-size: 50px; /* Smaller brand heading */
-    }
-
-    .footer-brand p {
-        font-size: 16px; /* Smaller brand paragraph */
-    }
-}
-
-/* For screens smaller than 480px (most mobile phones) */
+/* Untuk layar yang sangat kecil, di bawah 480px (kebanyakan ponsel) */
 @media (max-width: 480px) {
     .footer {
         padding: 20px 10px;
@@ -213,17 +160,25 @@
     }
 
     .footer-links {
-        font-size: 18px; /* Smallest font size for links */
+        font-size: 18px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
     }
-    
+
+    .footer-links a {
+        padding: 5px 0;
+    }
+
     .footer-links .underline {
-        display: none; /* Hide underline on very small screens if it's too much */
+        display: none; /* Hide underline on very small screens */
     }
 
     .footer-socials {
-        flex-direction: column; /* Stack social items vertically */
-        align-items: center; /* Center stacked social items */
-        gap: 15px; /* Gap between stacked social items */
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 
     .social-item {
@@ -236,10 +191,10 @@
     }
 
     .footer-brand h1 {
-        font-size: 40px; /* Even smaller brand heading */
+        font-size: 40px;
     }
 
     .footer-brand p {
-        font-size: 15px; /* Even smaller brand paragraph */
+        font-size: 15px;
     }
 }
