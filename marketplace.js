@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Fungsionalitas Hamburger Menu (tetap sama)
+    // Fungsionalitas Hamburger Menu (untuk navigasi utama)
     const hamburger = document.querySelector('.hamburger-menu');
     const navLinks = document.querySelector('.nav-links');
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Fungsionalitas Filter Kategori Utama (tetap sama)
+    // Fungsionalitas Filter Kategori Utama
     const categoryButtons = document.querySelectorAll('.category-btn');
     const productCards = document.querySelectorAll('.product-card');
 
@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Fungsionalitas Filter Panel
-    const filterToggleButton = document.querySelector('.filter-toggle-btn');
+    // Fungsionalitas Filter Panel (terkait dengan tombol hamburger filter)
+    const filterToggleButton = document.querySelector('.filter-toggle-btn'); // Ini sekarang adalah ikon hamburger filter
     const filterPanel = document.getElementById('filterPanel');
     const applyFilterBtn = document.querySelector('.apply-filter-btn');
     const resetFilterBtn = document.querySelector('.reset-filter-btn');
@@ -37,12 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Toggle filter panel
-    filterToggleButton.addEventListener('click', () => {
+    filterToggleButton.addEventListener('click', (event) => {
+        event.stopPropagation(); // Mencegah event klik menyebar ke document dan langsung menutup panel
         filterPanel.classList.toggle('active');
     });
 
     // Tutup filter panel jika klik di luar
     document.addEventListener('click', (event) => {
+        // Pastikan klik tidak berasal dari dalam panel atau dari tombol filter itu sendiri
         if (!filterPanel.contains(event.target) && !filterToggleButton.contains(event.target)) {
             filterPanel.classList.remove('active');
         }
@@ -90,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Filter by Dietary
             if (isVisible && selectedDietary.length > 0) {
-                // Produk harus memiliki SETIDAKNYA SATU dari dietary yang dipilih
                 let hasSelectedDietary = false;
                 for (let i = 0; i < selectedDietary.length; i++) {
                     if (cardDietary === selectedDietary[i]) {
